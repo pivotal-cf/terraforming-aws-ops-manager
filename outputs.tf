@@ -34,6 +34,10 @@ output "optional_ops_manager_dns" {
   value = "${module.ops_manager.optional_dns}"
 }
 
+output "optional_ops_manager_public_ip" {
+  value = "${module.ops_manager.optional_public_ip}"
+}
+
 output "env_dns_zone_name_servers" {
   value = "${aws_route53_zone.pcf_zone.name_servers}"
 }
