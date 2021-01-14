@@ -3,7 +3,7 @@ variable "rds_db_username" {
 }
 
 variable "rds_instance_class" {
-  default = "db.m4.large"
+  default = "db.m5.large"
 }
 
 variable "engine" {

@@ -129,12 +129,12 @@ tags = {
 - ops_manager_private: **(default: false)** Set to true if you want Ops Manager deployed in a private subnet instead of a public subnet
 
 ### S3 Buckets (optional) (PAS only)
-- create_backup_pas_buckets: **(default: false)**  
+- create_backup_pas_buckets: **(default: false)**
 - create_versioned_pas_buckets: **(default: false)**
 
 ### RDS (optional)
 - rds_instance_count: **(default: 0)** Whether or not you would like an RDS for your deployment
-- rds_instance_class: **(default: db.m4.large)** Size of the RDS to deploy
+- rds_instance_class: **(default: db.m5.large)** Size of the RDS to deploy
 - rds_db_username: **(default: admin)** Username for RDS authentication
 
 ### Isolation Segments (optional)  (PAS only)
