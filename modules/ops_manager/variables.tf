@@ -1,38 +1,52 @@
 variable "region" {
-  type = "string"
+  type = string
 }
 
-variable "optional_count" {}
+variable "optional_count" {
+}
 
-variable "vm_count" {}
+variable "vm_count" {
+}
 
-variable "private" {}
+variable "private" {
+}
 
-variable "env_name" {}
+variable "env_name" {
+}
 
-variable "ami" {}
+variable "ami" {
+}
 
-variable "optional_ami" {}
+variable "optional_ami" {
+}
 
-variable "instance_type" {}
+variable "instance_type" {
+}
 
-variable "subnet_id" {}
+variable "subnet_id" {
+}
 
-variable "vpc_id" {}
+variable "vpc_id" {
+}
 
-variable "vpc_cidr" {}
+variable "vpc_cidr" {
+}
 
 variable "additional_iam_roles_arn" {
-  type    = "list"
+  type    = list(string)
   default = []
 }
 
-variable "dns_suffix" {}
+variable "dns_suffix" {
+}
 
-variable "zone_id" {}
+variable "zone_id" {
+}
 
-variable "bucket_suffix" {}
+variable "bucket_suffix" {
+}
 
 variable "tags" {
-  type = "map"
+  type = map(string)
 }
+

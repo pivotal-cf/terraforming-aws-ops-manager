@@ -7,40 +7,42 @@ variable "rds_instance_class" {
 }
 
 variable "engine" {
-  type = "string"
+  type = string
 }
 
 variable "engine_version" {
-  type = "string"
+  type = string
 }
 
-variable "db_port" {}
+variable "db_port" {
+}
 
 variable "rds_instance_count" {
-  type    = "string"
+  type    = string
   default = 0
 }
 
 variable "env_name" {
-  type = "string"
+  type = string
 }
 
 variable "availability_zones" {
-  type = "list"
+  type = list(string)
 }
 
 variable "vpc_cidr" {
-  type = "string"
+  type = string
 }
 
 variable "vpc_id" {
-  type = "string"
+  type = string
 }
 
 variable "tags" {
-  type = "map"
+  type = map(string)
 }
 
 locals {
-  rds_cidr = "${cidrsubnet(var.vpc_cidr, 6, 3)}"
+  rds_cidr = cidrsubnet(var.vpc_cidr, 6, 3)
 }
+

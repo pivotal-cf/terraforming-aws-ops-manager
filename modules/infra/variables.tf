@@ -1,39 +1,40 @@
 variable "env_name" {
-  type = "string"
+  type = string
 }
 
 variable "region" {
-  type = "string"
+  type = string
 }
 
 variable "hosted_zone" {
-  type    = "string"
+  type    = string
   default = ""
 }
 
 variable "dns_suffix" {
-  type = "string"
+  type = string
 }
 
 variable "availability_zones" {
-  type = "list"
+  type = list(string)
 }
 
 variable "vpc_cidr" {
-  type    = "string"
+  type    = string
   default = "10.0.0.0/16"
 }
 
 variable "tags" {
-  type        = "map"
+  type        = map(string)
   default     = {}
   description = "Key/value tags to assign to all AWS resources"
 }
 
-variable "internetless" {}
+variable "internetless" {
+}
 
 variable "nat_ami_map" {
-  type = "map"
+  type = map(string)
 
   default = {
     ap-northeast-1 = "ami-0cf78ae724f63bac0"
@@ -56,6 +57,7 @@ variable "nat_ami_map" {
 }
 
 locals {
-  infrastructure_cidr = "${cidrsubnet(var.vpc_cidr, 10, 64)}"
-  public_cidr         = "${cidrsubnet(var.vpc_cidr, 6, 0)}"
+  infrastructure_cidr = cidrsubnet(var.vpc_cidr, 10, 64)
+  public_cidr         = cidrsubnet(var.vpc_cidr, 6, 0)
 }
+
