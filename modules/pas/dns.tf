@@ -1,5 +1,5 @@
 locals {
-  use_route53 = var.region != "us-gov-west-1"
+  use_route53 = false #var.region != "us-gov-west-1"
 }
 
 resource "aws_route53_record" "wildcard_sys_dns" {
