@@ -8,6 +8,12 @@ variable "hosted_zone" {
   default = ""
 }
 
+variable "assume_as_role" {
+  type = string
+  description = "arn of the role on the target account (account that hosts the CI)"
+  default = ""
+}
+
 variable "access_key" {
 }
 
