@@ -129,7 +129,6 @@ tags = {
 
 ### S3 Buckets (optional) (PAS only)
 - create_backup_pas_buckets: **(default: false)**
-- create_versioned_pas_buckets: **(default: false)**
 
 ### RDS (optional)
 - rds_instance_count: **(default: 0)** Whether or not you would like an RDS for your deployment

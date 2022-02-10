@@ -2,10 +2,6 @@ resource "aws_s3_bucket" "buildpacks_bucket" {
   bucket        = "${var.env_name}-buildpacks-bucket-${var.bucket_suffix}"
   force_destroy = true
 
-  versioning {
-    enabled = var.create_versioned_pas_buckets
-  }
-
   tags = merge(
     var.tags,
     {
@@ -17,10 +13,6 @@ resource "aws_s3_bucket" "buildpacks_bucket" {
 resource "aws_s3_bucket" "droplets_bucket" {
   bucket        = "${var.env_name}-droplets-bucket-${var.bucket_suffix}"
   force_destroy = true
-
-  versioning {
-    enabled = var.create_versioned_pas_buckets
-  }
 
   tags = merge(
     var.tags,
@@ -34,10 +26,6 @@ resource "aws_s3_bucket" "packages_bucket" {
   bucket        = "${var.env_name}-packages-bucket-${var.bucket_suffix}"
   force_destroy = true
 
-  versioning {
-    enabled = var.create_versioned_pas_buckets
-  }
-
   tags = merge(
     var.tags,
     {
@@ -49,10 +37,6 @@ resource "aws_s3_bucket" "packages_bucket" {
 resource "aws_s3_bucket" "resources_bucket" {
   bucket        = "${var.env_name}-resources-bucket-${var.bucket_suffix}"
   force_destroy = true
-
-  versioning {
-    enabled = var.create_versioned_pas_buckets
-  }
 
   tags = merge(
     var.tags,
