@@ -6,42 +6,6 @@ output "ops_manager_bucket" {
   value = module.ops_manager.bucket
 }
 
-output "pas_buildpacks_bucket" {
-  value = module.pas.pas_buildpacks_bucket
-}
-
-output "pas_droplets_bucket" {
-  value = module.pas.pas_droplets_bucket
-}
-
-output "pas_packages_bucket" {
-  value = module.pas.pas_packages_bucket
-}
-
-output "pas_resources_bucket" {
-  value = module.pas.pas_resources_bucket
-}
-
-output "pas_buildpacks_backup_bucket" {
-  value = module.pas.pas_buildpacks_backup_bucket
-}
-
-output "pas_droplets_backup_bucket" {
-  value = module.pas.pas_droplets_backup_bucket
-}
-
-output "pas_packages_backup_bucket" {
-  value = module.pas.pas_packages_backup_bucket
-}
-
-output "pas_resources_backup_bucket" {
-  value = module.pas.pas_resources_backup_bucket
-}
-
-output "blobstore_kms_key_id" {
-  value = module.pas.blobstore_kms_key_id
-}
-
 output "ops_manager_public_ip" {
   value = module.ops_manager.public_ip
 }
@@ -91,9 +55,6 @@ output "ops_manager_iam_user_secret_key" {
   sensitive = true
 }
 
-output "pas_bucket_iam_instance_profile_name" {
-  value = module.pas.pas_bucket_iam_instance_profile_name
-}
 
 output "rds_address" {
   value = module.rds.rds_address
@@ -164,46 +125,6 @@ output "infrastructure_subnet_gateways" {
   value = module.infra.infrastructure_subnet_gateways
 }
 
-output "pas_subnet_ids" {
-  value = module.pas.pas_subnet_ids
-}
-
-output "pas_subnets" {
-  value = module.pas.pas_subnet_ids
-}
-
-output "pas_subnet_availability_zones" {
-  value = module.pas.pas_subnet_availability_zones
-}
-
-output "pas_subnet_cidrs" {
-  value = module.pas.pas_subnet_cidrs
-}
-
-output "pas_subnet_gateways" {
-  value = module.pas.pas_subnet_gateways
-}
-
-output "services_subnet_ids" {
-  value = module.pas.services_subnet_ids
-}
-
-output "services_subnets" {
-  value = module.pas.services_subnet_ids
-}
-
-output "services_subnet_availability_zones" {
-  value = module.pas.services_subnet_availability_zones
-}
-
-output "services_subnet_cidrs" {
-  value = module.pas.services_subnet_cidrs
-}
-
-output "services_subnet_gateways" {
-  value = module.pas.services_subnet_gateways
-}
-
 output "vpc_id" {
   value = module.infra.vpc_id
 }
@@ -233,18 +154,6 @@ output "azs" {
   value = var.availability_zones
 }
 
-output "web_target_groups" {
-  value = module.pas.web_target_groups
-}
-
-output "tcp_target_groups" {
-  value = module.pas.tcp_target_groups
-}
-
-output "ssh_target_groups" {
-  value = module.pas.ssh_target_groups
-}
-
 output "ssl_cert" {
   sensitive = true
   value     = module.pas_certs.ssl_cert
@@ -253,10 +162,6 @@ output "ssl_cert" {
 output "ssl_private_key" {
   sensitive = true
   value     = module.pas_certs.ssl_private_key
-}
-
-output "isoseg_target_groups" {
-  value = [module.pas.isoseg_target_groups]
 }
 
 output "isoseg_ssl_cert" {
