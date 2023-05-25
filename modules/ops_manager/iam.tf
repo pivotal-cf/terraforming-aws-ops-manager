@@ -9,7 +9,7 @@ data "template_file" "ops_manager" {
 }
 
 data "aws_iam_policy_document" "ops_manager" {
-  source_json = data.template_file.ops_manager.rendered
+  source_policy_documents = data.template_file.ops_manager.rendered
 
   statement {
     sid     = "AllowToCreateInstanceWithCurrentInstanceProfile"
