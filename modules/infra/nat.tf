@@ -48,7 +48,7 @@ resource "aws_nat_gateway" "nat" {
 resource "aws_eip" "nat_eip" {
   count = var.internetless ? 0 : 1
 
-  vpc = true
+  domain = "vpc"
 
   tags = var.tags
 }
